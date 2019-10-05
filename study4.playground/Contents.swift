@@ -18,9 +18,22 @@ var myUInt:UInt
 var myFloat:Float = 3.14
 var myDouble:Double = 3.14 //123.456
 
-if( myFloat == myDouble){
-    print("두 수가 같습니다.")
-}else{
-    print("두 수가 다릅니다.")
-}
+//Character - 문자 하나 저장(Unicode)
+//한글 가 : 16진수 0xAC00
+//유니코드: 국제 문자 코드표
+//코드표: ASCII, EUC-KR(완성한글),Unicode
+var myChar:Character = "가"
 
+//String - 문자열 저장
+var myString:String = "대한"
+//문자열 연결 연산자 + (+ 연산자 : 좌우에 한곳이 문자열이면 문자열 연산자가 됨.)
+myString = myString + "민국"
+print(myString)
+
+//여러줄 문자열 연결 """ ~ """
+var multipleString = """
+여러줄의
+문자열을
+연결한다
+"""
+// \n은 개행문자(줄바꿈) 이다
