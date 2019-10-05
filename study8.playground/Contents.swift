@@ -48,3 +48,35 @@ if(rndNum < 30){
     print("50보다 작음")
 }
 
+//guard let문, guard else문
+func myFunc(){
+    var myString:String? = nil //"hong"
+    guard let newStr = myString, myString == "hong" else{
+        print("올바른 이름이 아님")
+        return
+    }
+    //수행문들 ...
+    
+}
+myFunc()
+
+//switch case문 : break문 생략됨
+
+let randomNum3:UInt32 = arc4random_uniform(10)
+switch randomNum3{
+case 0:
+    print("0")
+case 1...5:
+    print("1,2,3,4,5")
+case 6..<10:
+    print("6,7,8,9")
+default:
+    print("그 외의 값",randomNum3)
+}
+var name:String = "hong"
+switch name{ // 문자열을 넣을 수 있음
+case "hong":
+    print("hong임.")
+default:
+    print("그 외")
+}
