@@ -99,14 +99,34 @@ myString7.removeSubrange(removeRange)
 print(myString7)
 
 var myString8:String = "Swift Programming"
-var idx = 0
-var appendString = ""
+var arrayCh:[Character] = []
+var index = 0
 for ch in myString8{
-    idx+=1
-    if((idx - 1)<=5){
-        continue
+    if index > 5{
+        arrayCh.append(ch)
     }
-    appendString += String(ch)
-    
+    index += 1
 }
-print(appendString)
+let newCharString = String(arrayCh)
+
+//문자열 검색
+let myString9 = "Swift Programming"
+if myString9.contains("Swift"){
+    print("Swift 문자열이 있음")
+}else{
+    print("Swift 문자열이 없음")
+}
+
+if let result = myString9.range(of: "Swift"){
+    print("Swift 문자열이 있음")
+}else{
+    print("Swift 문자열이 없음")
+}
+
+//문자열 분리
+let myString10 = "1,2,3,4,5"
+let list:[String] = myString10.components(separatedBy: ",")
+
+for ch in list{
+    print(ch)
+}
