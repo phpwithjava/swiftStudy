@@ -130,3 +130,40 @@ let list:[String] = myString10.components(separatedBy: ",")
 for ch in list{
     print(ch)
 }
+
+let list2 = myString10.split(separator: ",")
+for ch in list2{
+    print(ch)
+}
+
+//문자열을 숫자로 바꿀때 = 형변환
+let myString11 = "123"
+let myInt:Int? = Int(myString11)
+let myInt2:Int = 200
+let myStringNum = String(myInt2)
+
+//형변환 Int -> Float
+let myFloat = 3.14
+let myInt3:Int? = Int(myFloat)
+let myFloat2:Float? = Float(300)
+
+//NSNumber - 숫자 타입의 데이터를 모두 래핑할 수 있는 클래스
+//           Int, Float, Double, Bool
+var myBool:Bool = true
+let boolObject = NSNumber(value: myBool)
+var myBool2:Bool = boolObject.boolValue
+
+var intNumber:Int = 10
+let intObject:NSNumber = NSNumber(value: intNumber)
+var intNumber2:Int = intObject.intValue
+
+//NSValue - 값 타입, 구조체, 클래스 객체를 모두 래핑할 수 있는 클래스
+let rangeValue = NSRange(location:0,length:3)
+let rangeObject = NSValue(range: rangeValue)
+let unboxedValue = rangeObject.rangeValue
+
+
+
+
+
+
